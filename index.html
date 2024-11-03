@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Japflix</title>
+
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="bg-dark">
+  <main>
+    <div class="text-center container">
+      <div class="row py-lg-3">
+        <div class="col-lg-6 col-md-8 mx-auto">
+          <h1 class="fw-light"><img src="img/japflix.png" alt=""></h1>
+          <input type="search" class="form-control" name="buscar" id="inputBuscar" placeholder="Ej.: The Lion King">
+          <button class="btn btn-primary m-2" id="btnBuscar">Buscar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="album">
+      <ul class="list-group container" id="lista">
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+      </ul>
+    </div>
+
+    <div class="offcanvas offcanvas-top text-bg-dark" tabindex="-1" id="movieDetail" aria-labelledby="movieDetailLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="movieTitle"></h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <p id="movieOverview"></p>
+        <h5>Géneros:</h5>
+        <p id="movieGenres"></p>
+
+        <div class="accordion position-absolute top-0 end-0 p-3" id="additionalInfo">
+          <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button me-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Más información
+                  </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#additionalInfo">
+                  <div class="accordion-body">
+                      <p id="movieReleaseYear"></p>
+                      <p id="movieDuration"></p>
+                      <p id="movieBudget"></p>
+                      <p id="movieRevenue"></p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+  </main>
+
+  <footer class="text-muted py-3">
+    <div class="container">
+      <p class="float-end mb-1">
+        <a href="#">Volver arriba</a>
+      </p>
+      <p class="mb-1">Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">
+          Jovenes a Programar</a>.
+      <p class="mb-1">Generado con fines estrictamente educativos.</p>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
